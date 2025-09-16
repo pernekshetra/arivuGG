@@ -1,0 +1,142 @@
+:root {
+  --theme-primary-color: #CD2E2C;
+  --theme-secondary-color: #FFD1D1;
+  --theme-tertiary-color: #E5E7EB;
+}
+
+:where(h3, h4, h5, h6, dt) {
+  max-inline-size: revert;
+}
+
+body {
+  background-color: white;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 1fr min(120ch, calc(100% - 16px)) 1fr;
+  grid-column-gap: 8px;
+  place-items: center;
+}
+
+.parent > * {
+  grid-column: 2;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+  width: 100%;
+  justify-self: stretch;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 72px;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: var(--theme-primary-color);
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+  a.button {
+    background-color: var(--theme-primary-color);
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    padding: 12px;
+  }
+}
+
+#hero {
+  background-color: #FFF2F2;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      color: #111827;
+      text-align: center;
+    }
+    p {
+      color: #4B5563;
+    }
+  }
+}
+
+#about, #strength {
+  background-color: #E5E7EB;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    margin-top: 20px;
+  }
+}
+
+#team, #products {
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: #111827;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  > p {
+    margin-top: 20px;
+  }
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 30px;
+    gap: 20px;
+    .card, .product-card {
+      width: 284px;
+      height: 276px;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 12px;
+      > div {
+        display: flex;
+        gap: 12px;
+      }
+    }
+  }
+}
+
+#products {
+  > div {
+    .product-card {
+      height: 330px;
+      img {
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+      }
+      a {
+        text-align: center;
+        color: white;
+        padding: 4px 16px 4px 16px;
+        border-radius: 16px;
+        background: linear-gradient(90deg, #CD2E2C, #951D1C);
+      }
+    }
+  }
+}
