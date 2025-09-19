@@ -138,8 +138,10 @@ header {
 }
 
 #team {
-  p {
-    color: #DC2626;
+  > div {
+    p {
+      color: #DC2626;
+    }
   }
 }
 
