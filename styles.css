@@ -12,14 +12,15 @@ body {
   background-color: white;
 }
 
-.parent {
+.parent, footer {
   display: grid;
-  grid-template-columns: 1fr min(120ch, calc(100% - 16px)) 1fr;
+  grid-template-columns: 1fr min(100ch, calc(100% - 16px)) 1fr;
   grid-column-gap: 8px;
   place-items: center;
 }
 
-.parent > * {
+.parent > *,
+footer > * {
   grid-column: 2;
 }
 
@@ -137,6 +138,47 @@ header {
         padding: 4px 16px 4px 16px;
         border-radius: 16px;
         background: linear-gradient(90deg, #CD2E2C, #951D1C);
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #1F1F1F;
+  color: #E5E7EB;
+  h5 {
+    font-weight: 700;
+  }
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+    gap: 50px;
+    .one {
+      max-width: 460px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      p {
+      }
+      a {
+        align-self: flex-start;
+        text-align: center;
+        color: white;
+        padding: 4px 16px 4px 16px;
+        border-radius: 16px;
+        background: linear-gradient(90deg, #CD2E2C, #951D1C);
+      }
+    }
+    .two {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      > div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
       }
     }
   }
