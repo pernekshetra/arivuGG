@@ -148,6 +148,11 @@ header {
     p {
       color: #DC2626;
     }
+    .card {
+      img {
+        border-radius: 50%;
+      }
+    }
   }
 }
 
