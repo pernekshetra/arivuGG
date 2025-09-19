@@ -63,13 +63,25 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    gap: 16px;
     h1 {
       color: #111827;
       text-align: center;
+      .red-text {
+        color: #DC2626;
+      }
     }
     p {
       color: #4B5563;
       text-align: center;
+    }
+    a {
+      align-self: center;
+      text-align: center;
+      color: white;
+      padding: 4px 16px 4px 16px;
+      border-radius: 16px;
+      background: linear-gradient(90deg, #CD2E2C, #951D1C);
     }
   }
 }
