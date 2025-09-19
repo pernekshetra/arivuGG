@@ -209,6 +209,15 @@ footer {
         }
       }
     }
+    .three {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      > div {
+        display: flex;
+        gap: 12px;
+      }
+    }
   }
   hr {
     color: #1F2937;
