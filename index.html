@@ -179,6 +179,21 @@
       </div>
     </footer>
     <script>
+      // Randomising the position of the team member cards
+      window.addEventListener("DOMContentLoaded", () => {
+        const container = document.querySelector(".member-cards");
+        if(!container) {
+          return;
+        }
+        const cards = Array.from(container.children);
+        for(let i = cards.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [cards[i], cards[j]] = [cards[j], cards[i]];
+        }
+        cards.forEach(card => container.appendChild(card));
+      });
+    </script>
+    <script>
       document.getElementById("year").innerText = new Date().getFullYear().toString();
     </script>
   </body>
