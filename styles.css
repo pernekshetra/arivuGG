@@ -124,7 +124,7 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     padding-top: 30px;
-    gap: 20px;
+    gap: 30px;
     .card, .product-card {
       width: 284px;
       height: 276px;
@@ -165,7 +165,8 @@ header {
 #products {
   > div {
     .product-card {
-      height: 330px;
+      height: 300px;
+      padding-bottom: 20px;
       img {
         border-top-left-radius: 12px;
         border-top-right-radius: 12px;
