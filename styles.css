@@ -157,6 +157,7 @@ header {
       color: #DC2626;
     }
     .card {
+      background-color: #FFF2F2;
       > img {
         border-radius: 50%;
       }
