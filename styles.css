@@ -73,11 +73,9 @@ header {
     top: 0;
     left: 0;
     z-index: 0;
-    pointer-events: all;
   }
 
   > * {
-    pointer-events: none;
     position: relative;
     z-index: 1;
   }
