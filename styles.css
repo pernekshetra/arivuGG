@@ -69,7 +69,6 @@ header {
   overflow: hidden;
 
   canvas {
-    touch-action: pay-y;
     position: absolute;
     top: 0;
     left: 0;

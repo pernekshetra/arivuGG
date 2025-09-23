@@ -21,8 +21,7 @@ function setup() {
 }
 
 function draw() {
-  const drawing = (touches && touches.length >= 2) || mouseIsPressed;
-  if(!drawing) {
+  if(!mouseIsPressed) {
     return;
   }
 
