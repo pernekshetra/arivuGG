@@ -21,6 +21,11 @@ function setup() {
 }
 
 function draw() {
+  const drawing = (touches && touches.length >= 2) || mouseIsPressed;
+  if(!drawing) {
+    return;
+  }
+
   // Advanced
   push();
 
@@ -72,8 +77,4 @@ function mousePressed() {
 
 function mouseReleased() {
   noLoop();
-}
-
-function touchMoved() {
-  return false;
 }
