@@ -1,3 +1,4 @@
+const weAreText = document.getElementById("color");
 let symmetry = 6;
 let angle = 360 / symmetry;
 let heroSection;
@@ -16,6 +17,7 @@ function setup() {
   background("#FFF2F2");
 
   window.addEventListener("scroll", () => {
+    weAreText.style.color = "black";
     background("#FFF2F2");
   });
 }
@@ -23,6 +25,10 @@ function setup() {
 function draw() {
   if(!mouseIsPressed) {
     return;
+  }
+
+  if(weAreText) {
+    weAreText.style.color = "white";
   }
 
   // Advanced
@@ -62,13 +68,6 @@ function draw() {
     }
   }
 }
-
-function windowResized() {
-  resizeCanvas(windowWidth, heroSection.clientHeight);
-  background(255);
-}
-
-new ResizeObserver(() => windowResized()).observe(heroSection);
 
 function mousePressed() { 
   loop();
