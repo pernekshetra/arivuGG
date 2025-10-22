@@ -94,6 +94,7 @@ header {
       .red-text {
         color: #DC2626;
         font-family: monospace;
+        text-shadow: 1px 2px #000000;
       }
     }
     p {
@@ -279,4 +280,5 @@ footer {
 .arivu {
   color: #DC2626;
   font-family: monospace;
+  text-shadow: 1px 1px #000000;
 }
